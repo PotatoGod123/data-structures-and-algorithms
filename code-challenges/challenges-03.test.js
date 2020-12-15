@@ -225,12 +225,18 @@ const sortMeetingsByDay = (arr) => {
   arr.sort((a,b)=>{
     let aHold=a.dayOfWeek.toLowerCase();
     let bHold=b.dayOfWeek.toLowerCase();
-    if(aHold==='monday'&&bHold==='monday'){
+    
+    if(aHold>bHold){
+      return 1;
+    }else if(aHold<bHold){
+      return -1;
+    }else{
       return 0;
-    }else if(aHold==='monday'){
-      return -1
     }
-  })
+  });
+ 
+  arr.push(arr.shift());
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -245,6 +251,20 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  arr.sort((a,b)=>{
+    let holdAStart = parseInt(a.start);
+    let holdBStart = parseInt(b.start);
+    let holdAEnd= parseInt(a.end);
+    let holdBEnd= parseInt(b.end);
+    if(holdAStart===holdBStart){
+      return holdAEnd-holdBEnd;
+    }else{
+      return holdAStart-holdBStart;
+      }
+    });
+  sortMeetingsByDay(arr);
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -262,6 +282,7 @@ $ = createSnippetWithJQuery(`
 
 const addPearClass = () => {
   // Solution code here...
+  $('li:nth-child(3)').addClass('pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -380,7 +401,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -390,7 +411,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
@@ -403,7 +424,7 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should add a class of pear to the thrid li', () => {
     addPearClass();
     expect($('li:nth-child(3)').hasClass('pear')).toBe(true);
