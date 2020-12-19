@@ -26,7 +26,7 @@ const generateSubmitButton = () => {
   // Solution code here...
   let $button = $("<button>submit</button>");
   $('form').append($button);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -151,7 +151,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 let hangman = (str) => {
   // Solution code here...
   let regex= /a|e|i|o|u/gi;
-  return str.replace(regex, '_')
+  return str.replace(regex, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -186,7 +186,7 @@ describe('Testing challenge 1', () => {
   test('It should add a submit button to the DOM', () => {
     generateSubmitButton();
     expect($('button').text()).toStrictEqual('submit');
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
@@ -286,4 +286,4 @@ describe('Testing challenge 8', () => {
 
 function createSnippetWithJQuery(html){
   return cheerio.load(html);
-};
+}
