@@ -212,9 +212,70 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const detectTicTacToeWin = (board) => {
-  // Solution code here...
+const detectTicTacToeWin = (board) => {  let result = false;
+  // horizontal
+  for (let i = 0; i < board.length; i++) {
+    if (!result) {
+      result = helperFx(board[i]);
+    }
+  }
+  if (result) {
+    return result;
+  } else {
+    // vertical
+    result = anotherHelperFx(board);
+    return result;
+  }
 };
+
+function helperFx(board) {
+  if (board[0] === board[1]&&board[1] === board[2]) {
+    if (board[0] === '') {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
+
+function anotherHelperFx(board) {
+  if (board[0][0] === board[1][0] && board[1][0] === board[2][0]) {
+    if (board[0][0] === '') {
+      console.log('this is not working');
+      return false;
+    } else {
+      return true;
+    }
+  } else if (board[0][1] === board[1][1] && board[1][1]=== board[2][1]) {
+    if (board[0][1] === '') {
+      return false;
+    } else {
+      return true;
+    }
+  } else if (board[0][2] === board[1][2] && board[1][2] === board[2][2]) {
+    if (board[0][2] === '') {
+      return false;
+    } else {
+      return true;
+    }
+  } else if (board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+    if (board[0][0] === '') {
+      return false;
+    } else {
+      return true;
+    }
+  } else if (board[0][2] === board[1][1]&& board[1][1] === board[2][0]) {
+    if (board[0][2] === '') {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -314,7 +375,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
