@@ -12,7 +12,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 #### Approach & Efficiency  
 
-I took a for loop aproach while filling up a new array, as for the big 0 idk, fast i guess?
+I took a for loop aproach while filling up a new array, as for the big 0 idk, fast i  guess?
 
 #### Solution  
 
