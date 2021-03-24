@@ -11,4 +11,9 @@ public class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+
+    @Test public void testRandomMethodInArrayShift(){
+      ArrayShift testingObject = new ArrayShift();
+      assertTrue("testMethod should return true", testingObject.testMethod() );
+    }
 }
