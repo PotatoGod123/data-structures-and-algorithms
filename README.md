@@ -53,4 +53,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-[Java Structures](java/README.md)  
+[Java Structures](./challenges/java/README.md)  
