@@ -44,7 +44,7 @@ public class LinkedListTest {
     assertEquals(true,newList.includes(2));
   }
 
-  @Test public void firstNodeIsHead(){
+  @Test public void testFirstNodeIsHead(){
     LinkedList newList = new LinkedList();
     newList.insert(1);
     newList.insert(2);
@@ -52,4 +52,55 @@ public class LinkedListTest {
 
     assertEquals(3,newList.firstNode());
   }
+
+  @Test public void testAppend(){
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+
+    System.out.println(newList.printNode());
+
+    newList.append(4);
+    System.out.println(newList.printNode());
+
+    assertEquals(true,newList.includes(4));
+
+  }
+
+  @Test public void testInsertBefore(){
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+
+    System.out.println(newList.printNode());
+
+    newList.append(4);
+    System.out.println(newList.printNode());
+
+    newList.insertBefore(5,4);
+    System.out.println(newList.printNode());
+    assertEquals(true,newList.includes(5));
+
+  }
+
+  @Test public void testInsertAfter(){
+    LinkedList newList = new LinkedList();
+    newList.insert(1);
+    newList.insert(2);
+    newList.insert(3);
+
+    newList.append(4);
+    System.out.println(newList.printNode());
+    newList.insertBefore(5,4);
+    System.out.println(newList.printNode());
+
+    newList.insertAfter(6,6);
+    System.out.println(newList.printNode());
+
+    assertEquals(false,newList.includes(6));
+
+  }
+
 }
