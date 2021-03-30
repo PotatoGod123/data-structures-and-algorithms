@@ -18,24 +18,24 @@ I took a for a loop approach while filling up a new array, as for the big 0 idk,
 
 ![Whiteboard for Reverse Array](../../assets/aww-board.png)
 
-# ####################################################################
+# ####################################################################  
 
-### Add a value into the middle of an array
+### Add a value into the middle of an array  
 
-Puts something in the middle of arrray.
+Puts something in the middle of arrray.  
 
-#### Challenge
+#### Challenge  
 
-Write a function called insertShiftArray which takes in an array and the value to be added.
+Write a function called insertShiftArray which takes in an array and the value to be added.  
 
-#### Approach & Efficiency
+#### Approach & Efficiency  
 
-It's efficient as it wil get, depends on how big the array is that gets put in the args
+It's efficient as it wil get, depends on how big the array is that gets put in the args  
 
-#### Solution
+#### Solution  
 
 
-![Board for Shift Arrray](../../assets/shiftarrayboard.png)
+![Board for Shift Arrray](../../assets/shiftarrayboard.png)  
 
 # ####################################################################
 
@@ -85,4 +85,32 @@ toString()- will return a str of all the values in a fancy way
 
 includes(int num)-will check if a certain values is inside the linkedlist and return a boolean.
 
-firstNode()- will return the first value of your linked list
+firstNode()- will return the first value of your linked list  
+
+# ####################################################################  
+
+### Append to the end,Insert before and after in a LinkedList 
+
+.append(int val)==>This will append a value to the end of a linkedlist
+
+.insertBefore(int val,int findSpot)==> this will insert the val before the findSpot in the linked list
+
+.insertAfter(int val,int findSpot)==> this will insert the val after the findSpot in the linked list
+
+#### Challenge  
+
+Write the following methods for the Linked List class:
+
+    .append(value) which adds a new node with the given value to the end of the list
+    .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+    .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+
+#### Approach & Efficiency  
+
+Effieciency is 1n, it all depends on how big the LinkedList is, approach i took if just an iriterate while loop.
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/appendinsertLL.png)  
