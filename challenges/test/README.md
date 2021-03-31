@@ -114,3 +114,23 @@ Effieciency is 1n, it all depends on how big the LinkedList is, approach i took 
 
 
 ![Board for Shift Arrray](../../assets/appendinsertLL.png)  
+
+# ####################################################################  
+
+### Find value that's k from the end of an LL
+
+.kFromTheEnd(int k)==> return the value from the node that k from the end of LL.
+
+#### Challenge  
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.  
+
+
+#### Approach & Efficiency  
+
+Effieciency is 2n for time, cause we have to go through the loop twice. 1n+1n for space since  we only make two variables
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/LLkfromtheendboard.png)  
