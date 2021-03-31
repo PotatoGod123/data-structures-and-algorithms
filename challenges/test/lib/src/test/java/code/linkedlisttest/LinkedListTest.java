@@ -103,4 +103,20 @@ public class LinkedListTest {
 
   }
 
+  @Test public void testKFromTheEnd() throws Exception {
+    LinkedList newList = new LinkedList();
+    newList.insert(8);
+    newList.insert(3);
+    newList.insert(1);
+
+    newList.append(2);
+    System.out.println(newList.printNode());
+    //this throws an error if given int is bigger than LL
+//    System.out.println(newList.kFromTheEnd(6));
+
+    assertEquals(2, newList.kFromTheEnd(0));
+    assertEquals(3, newList.kFromTheEnd(2));
+
+  }
+
 }

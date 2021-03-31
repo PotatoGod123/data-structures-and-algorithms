@@ -31,6 +31,34 @@ public class LinkedList {
       }
     }
 
+    public int kFromTheEnd(int k) throws Exception {
+      Node currentNode = this.head;
+      int idxSpot = countSizeLL(currentNode)-k;
+//      System.out.println(idxSpot);
+      int counter= 0;
+
+      while (currentNode!=null){
+        if(idxSpot==counter){
+//          System.out.println("working");
+          return currentNode.value;
+        }
+        counter++;
+        currentNode=currentNode.next;
+      }
+
+      throw new Exception("int k given is out of bound from current LL");
+    }
+
+    private int countSizeLL( Node current){
+      int llSize=0;
+      while (current.next!=null){
+        llSize++;
+        current=current.next;
+      }
+
+      return llSize;
+    }
+
     public void insertBefore(int newVal,int findData){
       Node currentNode = this.head;
       Node newNode = new Node(newVal);
@@ -52,7 +80,7 @@ public class LinkedList {
 
       }
       System.out.println("Could not find value "+findData+" in linked list");
-      return;
+      throw new IndexOutOfBoundsException(findData);
     }
 
     public void insertAfter(int newVal,int findData){
