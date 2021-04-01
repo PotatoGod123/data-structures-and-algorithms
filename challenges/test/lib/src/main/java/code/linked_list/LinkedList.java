@@ -59,6 +59,45 @@ public class LinkedList {
       return llSize;
     }
 
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2){
+      Node currentNode1 = list1.head;//this is 1 || 2 Loop: this 3
+      Node next1;
+      Node currentNode2 = list2.head;//this is 5 || 2 Loop: this 9
+      Node next2;
+      //list 1 = [1] -> [3] -> [2] -> X
+      //list 2 = [5] -> [9] -> [4] -> X
+      if(currentNode1.next==null){
+        currentNode1.next=currentNode2;
+        return list1;
+      }
+
+      while(currentNode1!=null && currentNode2!=null){
+            next1=currentNode1.next;
+            //this 3 || 2 Loop: this [2]
+            next2=currentNode2.next;
+           //this 9 || 2 Loop: this [4]
+            //this is checking if the first array ends, it will just attach the rest  of second list to it
+            if(next1==null){
+              currentNode1.next=currentNode2;
+              break;
+
+            //this second if statement checks if the second list is shorts, if it, just attach the node2 to the rest of first list
+            }else if(next2==null){
+              currentNode2.next=currentNode1;
+            }
+           currentNode2.next=next1;
+           //[5]->[3] || 2 Loop: this[9]->[2]
+           currentNode1.next=currentNode2;
+            //[1]->[5]->[3] || 2 Loop: this[1]->[5]->[3]->[9]->[2]
+           currentNode1=next1;
+           //[1]=[3]
+           currentNode2=next2;
+           //[5]=[9]
+      }
+
+      return list1;
+    }
+
     public void insertBefore(int newVal,int findData){
       Node currentNode = this.head;
       Node newNode = new Node(newVal);
