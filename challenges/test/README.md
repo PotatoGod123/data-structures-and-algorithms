@@ -134,3 +134,24 @@ Effieciency is 2n for time, cause we have to go through the loop twice. 1n+1n fo
 
 
 ![Board for Shift Arrray](../../assets/LLkfromtheendboard.png)  
+
+# ####################################################################  
+
+### Merged two Linkedlist at alternating spots so they become into one linklist  
+
+zipLists(LinkedList list, LinkedList list2)==> will merges two linked list into one and return the merge one, warning the first list in the args will always go first in the alternation 
+and it will rearrange your second list as well since it just returns the first list. Kinda redudant but hey its what the challenge asked
+
+#### Challenge  
+
+Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.  
+
+
+#### Approach & Efficiency  
+
+Effieciency is n for time, cause we have to go through a  while loop. O(1) for space since  we only make have one operation running
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/zipLL.png)  

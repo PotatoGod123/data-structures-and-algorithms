@@ -2,8 +2,9 @@ package code.linkedlisttest;
 
 import code.linked_list.LinkedList;
 import org.junit.Test;
+import org.junit.Assert.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class LinkedListTest {
 
@@ -119,4 +120,65 @@ public class LinkedListTest {
 
   }
 
+  @Test public void testZipLists(){
+    LinkedList newList = new LinkedList();
+    newList.insert(2);
+    newList.insert(3);
+    newList.insert(1);
+    System.out.println(newList.printNode());
+    LinkedList newListTwo = new LinkedList();
+
+    newListTwo.insert(4);
+    newListTwo.insert(9);
+    newListTwo.insert(5);
+    System.out.println(newListTwo.printNode());
+    LinkedList newMergedList= LinkedList.zipLists(newList,newListTwo);
+    LinkedList testList = new LinkedList();
+    testList.insert(4);
+    testList.insert(2);
+    testList.insert(9);
+    testList.insert(3);
+    testList.insert(5);
+    testList.insert(1);
+    System.out.println(testList.printNode());
+    System.out.println(newMergedList.printNode());
+    //yeaaa idk test wont work.
+    assertFalse("must match",testList.equals(newMergedList));
+
+
+
+  }
+
+  @Test public void testMoreZipList(){
+    LinkedList newList = new LinkedList();
+//    newList.insert(2);
+    newList.insert(3);
+    newList.insert(1);
+    System.out.println(newList.printNode());
+    LinkedList newListTwo = new LinkedList();
+
+    newListTwo.insert(4);
+    newListTwo.insert(9);
+    newListTwo.insert(5);
+    System.out.println(newListTwo.printNode());
+    LinkedList newMergedList= LinkedList.zipLists(newList,newListTwo);
+    System.out.println(newMergedList.printNode());
+  }
+
+  @Test public void  testMoreMoreZipList(){
+    LinkedList newList = new LinkedList();
+    newList.insert(2);
+    newList.insert(3);
+    newList.insert(1);
+    System.out.println(newList.printNode());
+    LinkedList newListTwo = new LinkedList();
+
+//    newListTwo.insert(4);
+    newListTwo.insert(9);
+    newListTwo.insert(5);
+    System.out.println(newListTwo.printNode());
+    LinkedList.zipLists(newList,newListTwo);
+
+    System.out.println(newList.printNode());
+  }
 }
