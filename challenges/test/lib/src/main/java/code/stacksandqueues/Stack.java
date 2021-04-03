@@ -25,7 +25,7 @@ public class Stack<T> {
     if(this.top==null)throw new EmptyStackException(); //just checking like above
     return this.top.value;//if not empty, return the top value
   }
-  public boolean isEmpty(){
+  public boolean isEmpty(){// just checks  to see if the stack is empty
     if(top==null)return false;
     return true;
   }
