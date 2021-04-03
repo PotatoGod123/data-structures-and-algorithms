@@ -155,3 +155,27 @@ Effieciency is n for time, cause we have to go through a  while loop. O(1) for s
 
 
 ![Board for Shift Arrray](../../assets/zipLL.png)  
+
+
+# ####################################################################  
+
+
+### Stacks and Queues  
+<!-- Short summary or background information -->
+Learning new data structure and there methods.
+#### Challenge
+<!-- Description of the challenge -->
+Create a Stack And Queue class while using a Node class to meet the needs of each data structure. Then make the require methods to come with each type.
+#### Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Declare a node taking in generic type, one constructor being used for the stack while the other constructor being use for the queue.
+#### API
+<!-- Description of each method publicly available to your Stack and Queue-->
+
+##### Stack
+
+push(T value)==> will push whatever value you put inside the args into your Stack.
+
+pop()==> will remove the top of the stack and return you the value of it
+
+
