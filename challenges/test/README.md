@@ -172,10 +172,29 @@ Declare a node taking in generic type, one constructor being used for the stack 
 #### API
 <!-- Description of each method publicly available to your Stack and Queue-->
 
-##### Stack
+##### Stack  
 
-push(T value)==> will push whatever value you put inside the args into your Stack.
+push(T value)==> will push whatever value you put inside the args into your Stack.  
 
-pop()==> will remove the top of the stack and return you the value of it
+pop()==> will remove the top of the stack and return you the value of it  
 
 
+# ####################################################################  
+
+### Make a queue using 2 stacks  
+
+Make a queue data structure using stacks.
+
+#### Challenge  
+
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects.
+
+
+#### Approach & Efficiency  
+
+Effieciency is n for time, cause we have to go through a  while loop. O(1) for space since  we only make have one operation running
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/pseudoQueue.PNG)  
