@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
-  private Node<T> front;//this will point to the begnning
+  private Node<T> front;//this will point to the beginning
   private Node<T> back;//this will point essentially to the end
 
   public void enqueue(T value){
