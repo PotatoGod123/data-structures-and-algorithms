@@ -3,8 +3,8 @@ package code.stacksandqueues;
 import java.util.NoSuchElementException;
 
 public class PseudoQueue<T> {
-  Stack<T> firstStack = new Stack<T>();
-  Stack<T> secondStack = new Stack<T>();
+  Stack<T> firstStack = new Stack<>();
+  Stack<T> secondStack = new Stack<>();
 
   public void enqueue(T value){
     firstStack.push(value);

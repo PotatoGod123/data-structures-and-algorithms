@@ -198,3 +198,27 @@ Effieciency is n for time, cause we have to go through a  while loop. O(1) for s
 
 
 ![Board for Shift Arrray](../../assets/pseudoQueue.PNG)  
+
+# ####################################################################  
+
+### Make An animal shelters using queues  
+
+First-in, First out Animal Shelter.
+
+#### Challenge  
+
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+    enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+    dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+
+
+#### Approach & Efficiency  
+
+Effieciency is o1 for time, cause it will always either add a thing or remove a thing. O(n) for space effiecency since gave to make stacks.
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/animalQueue.PNG)  
