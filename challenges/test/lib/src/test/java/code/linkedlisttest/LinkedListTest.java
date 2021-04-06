@@ -2,7 +2,6 @@ package code.linkedlisttest;
 
 import code.linked_list.LinkedList;
 import org.junit.Test;
-import org.junit.Assert.*;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +9,7 @@ public class LinkedListTest {
 
   @Test public void testLinkedListIsNull(){
     LinkedList newList = new LinkedList();
-    assertEquals(true,newList.nada());
+    assertTrue(newList.nada());
 
 
   }
