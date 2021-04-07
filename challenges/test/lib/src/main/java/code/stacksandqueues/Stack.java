@@ -26,8 +26,8 @@ public class Stack<T> {
     return this.top.value;//if not empty, return the top value
   }
   public boolean isEmpty(){// just checks  to see if the stack is empty
-    if(top==null)return false;
-    return true;
+    if(top==null)return true;
+    return false;
   }
   @Override
   public String toString() {
