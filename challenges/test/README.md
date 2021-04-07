@@ -222,3 +222,30 @@ Effieciency is o1 for time, cause it will always either add a thing or remove a 
 
 
 ![Board for Shift Arrray](../../assets/animalQueue.PNG)  
+
+# ####################################################################  
+
+### Make A Complete bracket validation  
+
+Validate if a string has a complete set of brackets.
+
+#### Challenge  
+
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+    Round Brackets : ()
+    Square Brackets : []
+    Curly Brackets : {}
+
+
+#### Approach & Efficiency  
+
+Time is O(n) since there's only one operation being run.
+
+Space O(n) since we make a stacl that at most will be empty but filled with the matching brackets, no matter how many there are.
+
+
+#### Solution  
+
+
+![Board for Shift Arrray](../../assets/validatingBrackets.PNG)  

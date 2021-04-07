@@ -13,13 +13,13 @@ public class PseudoQueue<T> {
   public T dequeue(){
     if(firstStack.isEmpty() && secondStack.isEmpty())throw new NoSuchElementException();
 
-    while (firstStack.isEmpty()){
+    while (!firstStack.isEmpty()){
       System.out.println("test");
       secondStack.push(firstStack.pop());
     }
     T temp= secondStack.pop();
 
-    while (secondStack.isEmpty()){
+    while (!secondStack.isEmpty()){
       firstStack.push(secondStack.pop());
     }
 
