@@ -20,6 +20,8 @@ public class MultiBracketValidationTest {
 
   @Test public void testFalse(){
     List<String> holder = Arrays.asList("[({}]","(](","{(})");
+//    holder.size();
+//    holder.get();
 
     //.stream() has a lot of powerful methods
     holder.stream().forEach(c ->
