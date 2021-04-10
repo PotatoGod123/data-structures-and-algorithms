@@ -4,6 +4,11 @@
 package code;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
@@ -15,5 +20,17 @@ public class LibraryTest {
     @Test public void testRandomMethodInArrayShift(){
       ArrayShift testingObject = new ArrayShift();
       assertTrue("testMethod should return true", testingObject.testMethod() );
+    }
+
+    @Test public void testDuckDuckGame(){
+      List<String> list = new ArrayList<>();
+      list.add("bob");
+      list.add("james");
+      list.add("cris");
+      list.add("ed");
+      list.add("amilia");
+
+      System.out.println(list);
+      System.out.println(Library.duckDuckGoose(list,3));
     }
 }

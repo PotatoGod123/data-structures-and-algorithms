@@ -3,8 +3,26 @@
  */
 package code;
 
+import java.util.List;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
+    }
+
+    public static String duckDuckGoose(List<String> list,int k){
+      int nth = k;
+      int step = nth - 1;
+      int benchmark = 0;
+
+      while (list.size() > 1) {
+        benchmark += step;
+        benchmark = benchmark > list.size() - 1 ? benchmark % list.size() : benchmark;
+        System.out.println(benchmark);
+        list.remove(list.get(benchmark));
+        System.out.println(list);
+      }
+
+      return list.get(0);
     }
 }
