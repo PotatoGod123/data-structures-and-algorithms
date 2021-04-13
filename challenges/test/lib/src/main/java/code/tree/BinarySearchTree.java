@@ -1,7 +1,9 @@
 package code.tree;
 
-public class BinarySearchTree<T extends Comparable<T>> {
+public class BinarySearchTree<T extends Comparable<T>> extends Tree<T>{
   Node<T> root=null;
+
+
 
   public void add(T value){
     if(root==null){ this.root= new Node<>(value,null,null); return; }
@@ -47,6 +49,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
       }
     }
 
+  }
+
+  public Node<T> getRoot() {
+    return root;
+  }
+
+  public void setRoot(Node<T> root) {
+    this.root = root;
   }
 
   @Override

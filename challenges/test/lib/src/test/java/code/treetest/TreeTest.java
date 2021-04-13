@@ -134,5 +134,39 @@ public class TreeTest {
 
     assertTrue(searchTree.contains(7));
     assertFalse(searchTree.contains(-4));
+    System.out.println(searchTree.breadthFirst());
+  }
+
+  @Test public void treeMaxinumValueTest(){
+    Tree newTree = new Tree();
+    Node a = new Node(2);
+    Node b = new Node(7);
+    Node c = new Node(5);
+    Node d = new Node(2);
+    Node e = new Node(6);
+    Node f = new Node(5);
+    Node g = new Node(11);
+    Node h = new Node(9);
+    Node i = new Node(4);
+//    Node j = new Node(2);
+    Node k = new Node(5);
+
+    newTree.root=a;
+
+    a.left=b;
+    b.left=d;
+    b.right=e;
+    e.left=f;
+    e.right=g;
+
+    a.right=k;
+    k.right=h;
+    h.left=i;
+    i.right=new Node(144);
+
+    System.out.println(newTree.findMaximunValue());
+    f.left=new Node(1234);
+
+    assertEquals(1234,newTree.findMaximunValue());
   }
 }

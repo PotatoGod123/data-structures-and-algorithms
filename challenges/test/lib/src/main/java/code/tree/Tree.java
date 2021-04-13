@@ -3,13 +3,13 @@ package code.tree;
 import java.util.ArrayList;
 
 public class Tree<T> {
-  public Node root=null;
-
+  public Node<T> root=null;
 
 
   public String breadthFirst(){
     //check if the root is null, if it is tree is empty
-    if(root==null)return "Nothing in the tree";
+    System.out.println(this.root);
+    if(this.root==null)return "Nothing in the tree";
     // make an array that we will as a deque
     ArrayList<Node> listHolder = new ArrayList<>();
     String str= "";
@@ -76,5 +76,27 @@ public class Tree<T> {
     array.add(node.value);
     System.out.println(node.value);
 
+  }
+
+  public int findMaximunValue(){
+    int value= 0;
+      return _findMaxinumValue((Node<Integer>) this.root,value);
+  }
+
+  private int _findMaxinumValue(Node<Integer> node, int value){
+    if(node==null)return value;
+    System.out.println(node.value+"This is the node value");
+    System.out.println(value+"this is the value");
+
+    if(node.value>value){
+      value=node.value;
+      System.out.println(value+"this is the value inside the if");
+    }
+
+    value= this._findMaxinumValue(node.left,value);
+
+    value=this._findMaxinumValue(node.right,value);
+
+    return value;
   }
 }
