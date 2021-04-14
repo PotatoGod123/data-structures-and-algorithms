@@ -79,8 +79,7 @@ public class Tree<T> {
   }
 
   public int findMaximunValue(){
-    int value= 0;
-      return _findMaxinumValue((Node<Integer>) this.root,value);
+      return _findMaxinumValue((Node<Integer>) this.root,Integer.MIN_VALUE);
   }
 
   private int _findMaxinumValue(Node<Integer> node, int value){
