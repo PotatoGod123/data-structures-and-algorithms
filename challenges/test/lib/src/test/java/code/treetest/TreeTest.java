@@ -169,4 +169,40 @@ public class TreeTest {
 
     assertEquals(1234,newTree.findMaximunValue());
   }
+
+  @Test
+  public void testBreathFirstBinaryTree(){
+    BinarySearchTree searchTree = new BinarySearchTree();
+
+    searchTree.add(10);
+    searchTree.add(4);
+    searchTree.add(143);
+    searchTree.add(2);
+    searchTree.add(1);
+    searchTree.add(3);
+
+    searchTree.add(5);
+    searchTree.add(6);
+    searchTree.add(7);
+    searchTree.add(12143);
+    searchTree.add(1234214214);
+
+    System.out.println(searchTree.toString());
+    System.out.println(searchTree.breadthFirstBinaryTree());
+
+    ArrayList<Integer> holder =  new ArrayList<>();
+    holder.add(10);
+    holder.add(4);
+    holder.add(143);
+    holder.add(2);
+    holder.add(5);
+    holder.add(12143);
+    holder.add(1);
+    holder.add(3);
+    holder.add(6);
+    holder.add(1234214214);
+    holder.add(7);
+
+    assertArrayEquals(holder.toArray(), searchTree.breadthFirstBinaryTree().toArray());
+  }
 }

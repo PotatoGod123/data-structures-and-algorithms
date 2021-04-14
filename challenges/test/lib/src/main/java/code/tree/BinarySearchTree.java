@@ -1,5 +1,10 @@
 package code.tree;
 
+import code.stacksandqueues.Queue;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
 public class BinarySearchTree<T extends Comparable<T>> extends Tree<T>{
   Node<T> root=null;
 
@@ -49,6 +54,26 @@ public class BinarySearchTree<T extends Comparable<T>> extends Tree<T>{
       }
     }
 
+  }
+
+  public ArrayList<T> breadthFirstBinaryTree(){
+    if(this.root==null) throw  new Error("Empty tree");
+
+    Queue<Node> queue = new Queue<>();
+    ArrayList arrayList = new ArrayList();
+    queue.enqueue(this.root);
+
+    while (!queue.isEmpty()){
+      Node current = queue.dequeue();
+
+      arrayList.add(current.value);
+
+      if(current.left!=null) queue.enqueue(current.left);
+      if(current.right!=null) queue.enqueue(current.right);
+
+    }
+
+    return arrayList;
   }
 
   public Node<T> getRoot() {
