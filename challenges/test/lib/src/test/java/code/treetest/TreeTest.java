@@ -3,6 +3,7 @@ package code.treetest;
 import code.tree.BinarySearchTree;
 import code.tree.Node;
 import code.tree.Tree;
+import code.utilities.FizzBuzzTree;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -171,6 +172,41 @@ public class TreeTest {
   }
 
   @Test
+  public void treeFizzBuzz(){
+    Tree newTree = new Tree();
+    Node a = new Node(2);
+    Node b = new Node(7);
+    Node c = new Node(5);
+    Node d = new Node(15);
+    Node e = new Node(6);
+    Node f = new Node(5);
+    Node g = new Node(11);
+    Node h = new Node(9);
+    Node i = new Node(4);
+//    Node j = new Node(2);
+    Node k = new Node(5);
+
+    newTree.root=a;
+
+    a.left=b;
+    b.left=d;
+    b.right=e;
+    e.left=f;
+    e.right=g;
+
+    a.right=k;
+    k.right=h;
+    h.left=i;
+    i.right=new Node(144);
+
+    Tree fizzTree =FizzBuzzTree.fizzBuzzTree(newTree);
+
+    System.out.println(fizzTree.root.value);
+    System.out.println(fizzTree.root.left.value);
+    System.out.println(fizzTree.root.right.value);
+
+    assertEquals("FizzBuzz",fizzTree.root.left.left.value);
+
   public void testBreathFirstBinaryTree(){
     BinarySearchTree searchTree = new BinarySearchTree();
 
@@ -204,5 +240,6 @@ public class TreeTest {
     holder.add(7);
 
     assertArrayEquals(holder.toArray(), searchTree.breadthFirstBinaryTree().toArray());
+
   }
 }
