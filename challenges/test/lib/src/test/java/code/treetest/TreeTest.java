@@ -172,7 +172,7 @@ public class TreeTest {
   }
 
   @Test
-  public void treeFizzBuzz(){
+  public void treeFizzBuzz() {
     Tree newTree = new Tree();
     Node a = new Node(2);
     Node b = new Node(7);
@@ -186,27 +186,28 @@ public class TreeTest {
 //    Node j = new Node(2);
     Node k = new Node(5);
 
-    newTree.root=a;
+    newTree.root = a;
 
-    a.left=b;
-    b.left=d;
-    b.right=e;
-    e.left=f;
-    e.right=g;
+    a.left = b;
+    b.left = d;
+    b.right = e;
+    e.left = f;
+    e.right = g;
 
-    a.right=k;
-    k.right=h;
-    h.left=i;
-    i.right=new Node(144);
+    a.right = k;
+    k.right = h;
+    h.left = i;
+    i.right = new Node(144);
 
-    Tree fizzTree =FizzBuzzTree.fizzBuzzTree(newTree);
+    Tree fizzTree = FizzBuzzTree.fizzBuzzTree(newTree);
 
     System.out.println(fizzTree.root.value);
     System.out.println(fizzTree.root.left.value);
     System.out.println(fizzTree.root.right.value);
 
-    assertEquals("FizzBuzz",fizzTree.root.left.left.value);
-
+    assertEquals("FizzBuzz", fizzTree.root.left.left.value);
+  }
+  @Test
   public void testBreathFirstBinaryTree(){
     BinarySearchTree searchTree = new BinarySearchTree();
 
