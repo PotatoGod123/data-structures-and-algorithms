@@ -310,3 +310,5 @@ Space O(n) since we=it will keep calling operation depending on how many nodes a
 ## Blog Post
 
 [Sort](./BlogPost/Sort.md)
+
+[Merge Sort](./BlogPost/MergeSort.md)
