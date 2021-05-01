@@ -119,7 +119,7 @@ public class LinkedList {
 
       }
       System.out.println("Could not find value "+findData+" in linked list");
-      throw new IndexOutOfBoundsException(findData);
+      throw new IndexOutOfBoundsException(""+findData);
     }
 
     public void insertAfter(int newVal,int findData){

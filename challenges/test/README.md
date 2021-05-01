@@ -307,8 +307,35 @@ Space O(n) since we=it will keep calling operation depending on how many nodes a
 
 # ##################################
 
+### Hash Tables
+Hash Table are essentially a way of storing key value pairs which two keys ever being the same.The way I implemented this hash set is by using buckets with the set being initialized with its size. This means the hashset will have that many buckets, and each bucket is a Linked List with the value of each node being an object holding the key and the value.
+
+#### Challenge
+Implement a Hashtable with the following methods:
+
+    add: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+    get: takes in the key and returns the value from the table.
+    contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
+    hash: takes in an arbitrary key and returns an index in the collection.
+
+
+#### Approach & Efficiency
+Used an arraylist with each index holding an arraylist which then each node in the arraylist holding an object with the key and value property.
+
+#### API
+yourHashTable.add(key,value)- this will add your key and value into the hash set.
+
+yourHashTable.get(key)- this will return the value paired with the inputted key. If no match found, it will return null.
+
+yourHashTable.contains(key)- this will look to see if your hashtable contains the key and return true, if not it will return false.
+
+
+
+# ################################
 ## Blog Post
 
 [Sort](./BlogPost/Sort.md)
 
 [Merge Sort](./BlogPost/MergeSort.md)
+
+
