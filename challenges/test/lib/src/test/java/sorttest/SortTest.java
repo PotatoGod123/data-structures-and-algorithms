@@ -2,11 +2,9 @@ package sorttest;
 
 import org.junit.Test;
 
-import static code.sort.Sort.mergeSort;
+import static code.sort.Sort.*;
 import static org.junit.Assert.*;
 import java.util.Arrays;
-
-import static code.sort.Sort.insertionSort;
 
 public class SortTest {
 
@@ -48,5 +46,14 @@ public class SortTest {
     assertArrayEquals(sortedArr2,arr2);
     mergeSort(arr3);
     assertArrayEquals(sortedArr3,arr3);
+  }
+
+  @Test
+  public void testingQuickSort(){
+    int[] arr1 ={8,4,23,42,14,15};
+    System.out.println(Arrays.toString(arr1));
+    quickSort(arr1,0,arr1.length-1);
+    System.out.println(Arrays.toString(arr1));
+
   }
 }
