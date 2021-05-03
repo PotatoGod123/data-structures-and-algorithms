@@ -329,9 +329,32 @@ yourHashTable.get(key)- this will return the value paired with the inputted key.
 
 yourHashTable.contains(key)- this will look to see if your hashtable contains the key and return true, if not it will return false.
 
+# ####################################################################
 
+
+
+
+### Repeated Word
+Find your most repeated word!
+
+### Challenge Description
+
+    Write a function that accepts a lengthy string parameter.
+    Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+
+###  Approach And Efficiency
+Time:O(n)- Depends on how long the string is.
+Space:0(2n)- There were only be two operation
+
+
+### Solution  
+
+![Repeated Word](../../assets/repeatedword.PNG)
 
 # ################################
+
+
 ## Blog Post
 
 [Sort](./BlogPost/Sort.md)
