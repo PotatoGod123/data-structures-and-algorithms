@@ -348,7 +348,7 @@ Time:O(n)- Depends on how long the string is.
 Space:0(2n)- There were only be two operation
 
 
-### Solution  
+### Solution
 
 ![Repeated Word](../../assets/repeatedword.PNG)
 
