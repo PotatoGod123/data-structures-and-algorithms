@@ -1,4 +1,4 @@
-package repeatedwordtest;
+package code.repeatedwordtest;
 
 import org.junit.Test;
 
