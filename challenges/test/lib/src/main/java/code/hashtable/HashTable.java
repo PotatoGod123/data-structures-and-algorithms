@@ -21,7 +21,7 @@ public class  HashTable<T> {
   public void add(T key,T value){
     int hash = hash(key);
     LinkedList linkedListAtIndex = this.buckets.get(hash);
-    StorageObject storageObject= new StorageObject(key,value);
+    StorageObject storageObject= new StorageObject(key, value);
     linkedListAtIndex.add(storageObject);
   }
 
@@ -65,7 +65,7 @@ public class  HashTable<T> {
   }
 
 
-  private class StorageObject<T>{
+  private static class StorageObject<T>{
     T key;
     T value;
 
@@ -89,7 +89,7 @@ public class  HashTable<T> {
       "buckets=" + buckets +
       '}';
   }
-  private class LinkedList{
+  private static class LinkedList{
     Node<StorageObject> head;
 
     public void add(StorageObject storageObject){
@@ -102,12 +102,12 @@ public class  HashTable<T> {
         }
         current= current.next;
       }
-      this.head= new Node<StorageObject>(storageObject,this.head);
+      this.head= new Node<>(storageObject, this.head);
     }
 
 
 
-    public class Node<T>{
+    public static class Node<T>{
       StorageObject value;
       Node<StorageObject> next;
 
