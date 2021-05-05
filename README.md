@@ -1,5 +1,5 @@
 # Data Structures and Algorithms
-<!--
+
 ## Create a copy of this repository
 If you have not already created your data-structures-and-algorithms repository, Please follow these steps:
 1. Create a new, empty repository called `data-structures-and-algorithms`
@@ -26,7 +26,6 @@ If you have not already created your data-structures-and-algorithms repository, 
     Snapshots:   0 total
     Time:        0.892 s
    ```
-<!--
 1. Complete an "ACP"
    - `git add .`
    - `git commit -m "Created Data Structures Repo"`
