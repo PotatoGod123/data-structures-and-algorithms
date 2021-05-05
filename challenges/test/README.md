@@ -352,6 +352,31 @@ Space:0(2n)- There were only be two operation
 
 ![Repeated Word](../../assets/repeatedword.PNG)
 
+# ####################################################################
+
+
+
+
+### Tree Intersection
+Find the matching numbers in two tree's!
+
+### Challenge Description
+
+
+    Write a function called tree_intersection that takes two binary tree parameters.
+    Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+
+###  Approach And Efficiency
+Time:O(n+k)- The time will take n times for traversing the tree and plus k, where k the time it takes to check the set for mathcing numbers
+
+Space:0(2n)- Only two sets are ever made with each size depending on the nodes of the tree's
+
+
+### Solution
+
+![Repeated Word](../../assets/treeintersection.PNG)
+
 # ################################
 
 
