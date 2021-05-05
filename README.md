@@ -1,4 +1,6 @@
 # Data Structures and Algorithms
+
+## Author Cristian Robles
 <!--
 ## Create a copy of this repository
 If you have not already created your data-structures-and-algorithms repository, Please follow these steps:
