@@ -1,9 +1,7 @@
 # Data Structures and Algorithms
-
+<!--
 ## Create a copy of this repository
-
 If you have not already created your data-structures-and-algorithms repository, Please follow these steps:
-
 1. Create a new, empty repository called `data-structures-and-algorithms`
 1. Clone this repository to your machine, in your `codefellows` folder
 1. `cd` into the repo in your terminal
@@ -28,7 +26,7 @@ If you have not already created your data-structures-and-algorithms repository, 
     Snapshots:   0 total
     Time:        0.892 s
    ```
-
+<!--
 1. Complete an "ACP"
    - `git add .`
    - `git commit -m "Created Data Structures Repo"`
@@ -36,10 +34,9 @@ If you have not already created your data-structures-and-algorithms repository, 
 1. Return to GitHub and refresh the view of your `data-structures-and-algorithms` repository, where you should see what you pushed
 1. Go to the "Actions" tab
 1. You should see a green check mark on your most recent commit, showing that your tests are passing just as they were when you ran them from the terminal
-
+<
 Once this process completes, you will have a freshly setup "DS&A" folder structure on your system, and sync'd to GitHub.
-
-
+<
 ### Mission Accomplished!
 
 
