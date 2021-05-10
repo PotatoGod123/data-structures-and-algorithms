@@ -405,7 +405,7 @@ Space:0(n^2)- We only make the space depending how long the first hasmap is
 
 ![Repeated Word](../../assets/leftjoin.PNG)
 
-# ##################################
+# ####################################################################
 
 ## Graph
 A graph is a collection of data linked up together through relations. Each relation can also have a weight attached to it.
@@ -440,7 +440,29 @@ addNode(value)-> takes in any values and add it to the graph
 
 addEdge(vertex 1 , vertex 2)-> takes in two vertex's and make an edge between them, a relationship
 
-# ################################
+# ####################################################################
+
+
+###  Breadth-first traversal on a graph
+Implement a breadth-first traversal on a graph.
+
+### Challenge Description
+
+
+
+Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+
+
+###  Approach And Efficiency
+Time: O(v) - where v is the number of vertices
+Space:O(v)- where v is the number of vertices
+
+### Solution
+
+![Repeated Word](../../assets/breathfirstgraph.PNG)
+
+# ##################################
 
 
 ## Blog Post
