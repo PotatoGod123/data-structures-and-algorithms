@@ -29,6 +29,11 @@ public class Graph<T> {
 
   public List getNeighbors(Vertex vertex){
     if(!vertexes.contains(vertex))throw new NoSuchElementException();
+    if(vertexes.size()==1){
+      List holder = new ArrayList<>();
+      holder.add(new Edge(vertex,vertex));
+      return holder;
+    }
 
     return vertex.edges;
 
@@ -39,4 +44,7 @@ public class Graph<T> {
     if(vertexes.size()==0) return null;
     return vertexes.size();
   }
+
+
+
 }
