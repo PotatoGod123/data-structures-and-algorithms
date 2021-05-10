@@ -160,7 +160,7 @@ Effieciency is n for time, cause we have to go through a  while loop. O(1) for s
 # ####################################################################
 
 
-### Stacks and Queues
+## Stacks and Queues
 <!-- Short summary or background information -->
 Learning new data structure and there methods.
 #### Challenge
@@ -252,7 +252,7 @@ Space O(n) since we make a stacl that at most will be empty but filled with the 
 
 # ####################################################################
 
-# Trees
+## Trees
 <!-- Short summary or background information -->
 Make a tree and a binary search tree
 ## Challenge
@@ -307,7 +307,7 @@ Space O(n) since we=it will keep calling operation depending on how many nodes a
 
 # ##################################
 
-### Hash Tables
+## Hash Tables
 Hash Table are essentially a way of storing key value pairs which two keys ever being the same.The way I implemented this hash set is by using buckets with the set being initialized with its size. This means the hashset will have that many buckets, and each bucket is a Linked List with the value of each node being an object holding the key and the value.
 
 #### Challenge
@@ -405,6 +405,40 @@ Space:0(n^2)- We only make the space depending how long the first hasmap is
 
 ![Repeated Word](../../assets/leftjoin.PNG)
 
+# ##################################
+
+## Graph
+A graph is a collection of data linked up together through relations. Each relation can also have a weight attached to it.
+
+#### Challenge
+Implement your own Graph. The graph should be represented as an adjacency list, and should include the following methods:
+
+    AddNode()
+        Adds a new node to the graph
+        Takes in the value of that node
+        Returns the added node
+    AddEdge()
+        Adds a new edge between two nodes in the graph
+        Include the ability to have a “weight”
+        Takes in the two nodes to be connected by the edge
+            Both nodes should already be in the Graph
+    GetNodes()
+        Returns all of the nodes in the graph as a collection (set, list, or similar)
+    GetNeighbors()
+        Returns a collection of edges connected to the given node
+        Takes in a given node
+        Include the weight of the connection in the returned collection
+    Size()
+        Returns the total number of nodes in the graph
+
+
+#### Approach & Efficiency
+Using an array list to holder both the vertices and edges, also making a class for the vertex and Edge.
+
+#### API
+addNode(value)-> takes in any values and add it to the graph
+
+addEdge(vertex 1 , vertex 2)-> takes in two vertex's and make an edge between them, a relationship
 
 # ################################
 
