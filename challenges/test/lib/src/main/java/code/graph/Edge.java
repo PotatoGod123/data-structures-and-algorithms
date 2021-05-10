@@ -1,9 +1,9 @@
 package code.graph;
 
 public class Edge {
-  private Vertex vertexOne;
-  private Vertex vertexTwo;
-  private int weight;
+  public Vertex vertexOne;
+  public Vertex vertexTwo;
+  public int weight;
 
   public Edge(Vertex vertexOne, Vertex vertexTwo) {
     this.vertexOne = vertexOne;

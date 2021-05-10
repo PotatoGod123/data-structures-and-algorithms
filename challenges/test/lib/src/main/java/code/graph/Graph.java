@@ -1,15 +1,15 @@
 package code.graph;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import code.stacksandqueues.Queue;
+
+import java.util.*;
 
 public class Graph<T> {
-  private List<Vertex> vertexes = new ArrayList<>();
+  private List<Vertex<T>> vertexes = new ArrayList<>();
   private List<Edge> edges = new ArrayList<>();
 
-  public Vertex addNode(T value){
-    Vertex vertex = new Vertex(value);
+  public Vertex<T> addNode(T value){
+    Vertex<T> vertex = new Vertex<>(value);
     this.vertexes.add(vertex);
     return  vertex;
   }
@@ -23,7 +23,7 @@ public class Graph<T> {
     vertex2.edges.add(edge);
   }
 
-  public List<Vertex> getNodes() {
+  public List<Vertex<T>> getNodes() {
     return vertexes;
   }
 
@@ -39,12 +39,34 @@ public class Graph<T> {
 
   }
 
-
   public Integer size(){
     if(vertexes.size()==0) return null;
     return vertexes.size();
   }
 
+  public List breathFirstTraversal(Vertex startingNode){
+    Queue<Vertex> q = new Queue<>();
+    q.enqueue(startingNode);
+    List<Vertex> s = new ArrayList<>();
+    s.add(startingNode);
 
+    while(!q.isEmpty()){
+      Vertex current = q.dequeue();
+      for(Object e:current.edges){
+        Edge eHolder = ((Edge) e);
+        if(!s.contains(eHolder.vertexTwo)){
+          q.enqueue(eHolder.vertexTwo);
+          s.add(eHolder.vertexTwo);
+        }
+        if(!s.contains(eHolder.vertexOne)){
+          q.enqueue(eHolder.vertexOne);
+          s.add(eHolder.vertexOne);
+        }
+
+      }
+
+    }
+    return s;
+  }
 
 }
