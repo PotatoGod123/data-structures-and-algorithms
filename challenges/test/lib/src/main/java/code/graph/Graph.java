@@ -27,10 +27,10 @@ public class Graph<T> {
     return vertexes;
   }
 
-  public List getNeighbors(Vertex vertex){
+  public List<Edge> getNeighbors(Vertex vertex){
     if(!vertexes.contains(vertex))throw new NoSuchElementException();
     if(vertexes.size()==1){
-      List holder = new ArrayList<>();
+      List<Edge> holder = new ArrayList<>();
       holder.add(new Edge(vertex,vertex));
       return holder;
     }
@@ -44,10 +44,10 @@ public class Graph<T> {
     return vertexes.size();
   }
 
-  public List breathFirstTraversal(Vertex startingNode){
+  public Set breathFirstTraversal(Vertex startingNode){
     Queue<Vertex> q = new Queue<>();
     q.enqueue(startingNode);
-    List<Vertex> s = new ArrayList<>();
+    Set<Vertex> s = new LinkedHashSet<>();
     s.add(startingNode);
 
     while(!q.isEmpty()){

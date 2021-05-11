@@ -1,8 +1,11 @@
 package code.graphtest;
 
 import code.graph.Graph;
+
 import code.graph.Vertex;
 import org.junit.Test;
+
+import static code.graph.GetEdge.getEdge;
 import static org.junit.Assert.*;
 
 public class GraphTest {
@@ -46,5 +49,36 @@ public class GraphTest {
     String string3="[Vertex{value=Monstropolis}, Vertex{value=Arendelle}, Vertex{value=Metroville}, Vertex{value=Naboo}, Vertex{value=Pandora}, Vertex{value=Narnia}]";
     assertEquals(string3, graph.breathFirstTraversal(six).toString());
     System.out.println(graph.breathFirstTraversal(one).toString());
+  }
+
+  @Test
+  public void testingGetEdge(){
+    Graph graph = new Graph();
+
+    Vertex pandora = graph.addNode("Pandora");
+    Vertex arendelle = graph.addNode("Arendelle");
+    Vertex metroville = graph.addNode("Metroville");
+    Vertex narnia = graph.addNode("Narnia");
+    Vertex naboo = graph.addNode("Naboo");
+    Vertex monstropolis = graph.addNode("Monstropolis");
+
+    graph.addEdge(pandora,arendelle,150);
+    graph.addEdge(pandora,metroville,82);
+    graph.addEdge(metroville,arendelle,99);
+    graph.addEdge(metroville,monstropolis,105);
+    graph.addEdge(monstropolis,arendelle,42);
+    graph.addEdge(metroville,narnia,37);
+    graph.addEdge(metroville,naboo,26);
+    graph.addEdge(narnia,naboo,250);
+    graph.addEdge(naboo,monstropolis,73);
+
+    String[] strArr1= {"Metroville","Pandora"};
+    String[] strArr2={"Arendelle","Monstropolis","Naboo"};
+    String[] strArr3={"Naboo","Pandora"};
+    String[] strArr4={"Narnia","Arendelle","Naboo"};
+    System.out.println(getEdge(graph,strArr1));
+    System.out.println(getEdge(graph,strArr2));
+    System.out.println(getEdge(graph,strArr3));
+    System.out.println(getEdge(graph,strArr4));
   }
 }
