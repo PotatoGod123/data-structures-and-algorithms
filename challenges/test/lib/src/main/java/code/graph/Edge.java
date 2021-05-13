@@ -1,28 +1,28 @@
 package code.graph;
 
-public class Edge {
-  public Vertex vertexOne;
-  public Vertex vertexTwo;
+public class Edge<T> {
+  public Vertex<T> vertexOne;
+  public Vertex<T> vertexTwo;
   public int weight;
 
-  public Edge(Vertex vertexOne, Vertex vertexTwo) {
+  public Edge(Vertex<T> vertexOne, Vertex<T> vertexTwo) {
     this.vertexOne = vertexOne;
     this.vertexTwo = vertexTwo;
   }
 
-  public Vertex getVertexOne() {
+  public Vertex<T> getVertexOne() {
     return vertexOne;
   }
 
-  public void setVertexOne(Vertex vertexOne) {
+  public void setVertexOne(Vertex<T> vertexOne) {
     this.vertexOne = vertexOne;
   }
 
-  public Vertex getVertexTwo() {
+  public Vertex<T> getVertexTwo() {
     return vertexTwo;
   }
 
-  public void setVertexTwo(Vertex vertexTwo) {
+  public void setVertexTwo(Vertex<T> vertexTwo) {
     this.vertexTwo = vertexTwo;
   }
 

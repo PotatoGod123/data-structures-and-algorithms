@@ -71,7 +71,7 @@ public class LinkedList {
         return list1;
       }
 
-      while(currentNode1!=null && currentNode2!=null){
+      while(currentNode2 != null){
             next1=currentNode1.next;
             //this 3 || 2 Loop: this [2]
             next2=currentNode2.next;
@@ -142,14 +142,14 @@ public class LinkedList {
     //print the nodes in their current order with their values
     public String printNode(){
       Node currentNode = this.head;
-      String str = "";
+      StringBuilder str = new StringBuilder();
 
       while (currentNode!=null){
-        str+= currentNode.value+", ";
+        str.append(currentNode.value).append(", ");
         currentNode=currentNode.next;
       }
-      str+="null";
-      return str;
+      str.append("null");
+      return str.toString();
     }
    //will print out the values in a fancy looking way, using recursion function
     public String toString(){

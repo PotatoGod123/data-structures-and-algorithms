@@ -5,7 +5,7 @@ import java.util.List;
 
 public class  Vertex<T> {
   public T value;
-  public List<Edge> edges = new ArrayList<>();
+  public List<Edge<T>> edges = new ArrayList<>();
 
   public Vertex(T value) {
     this.value = value;

@@ -1,6 +1,6 @@
 package code.stacksandqueues;
 
-import java.util.ArrayList;
+
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
@@ -37,8 +37,7 @@ public class Queue<T> {
   }
 
   public boolean isEmpty(){//this bad boy will check the front and see if its not null, hence it is not empty. but if is, we send back true
-    if(front!=null)return false;
-    return true;
+    return front == null;
   }
 
   @Override
