@@ -1,12 +1,13 @@
 package code.graph;
 
 import code.stacksandqueues.Queue;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.*;
 
 public class Graph<T> {
-  private List<Vertex<T>> vertexes = new ArrayList<>();
-  private List<Edge> edges = new ArrayList<>();
+  private final List<Vertex<T>> vertexes = new ArrayList<>();
+  private final List<Edge<T>> edges = new ArrayList<>();
 
   public Vertex<T> addNode(T value){
     Vertex<T> vertex = new Vertex<>(value);
@@ -14,9 +15,9 @@ public class Graph<T> {
     return  vertex;
   }
 
-  public void addEdge(Vertex vertex1, Vertex vertex2,int weight){
+  public void addEdge(Vertex<T> vertex1, Vertex<T> vertex2,int weight){
     if(!this.vertexes.contains(vertex1)||!this.vertexes.contains(vertex2))throw new NoSuchElementException();
-    Edge edge = new Edge(vertex1,vertex2);
+    Edge<T> edge = new Edge<>(vertex1,vertex2);
     edge.setWeight(weight);
     edges.add(edge);
     vertex1.edges.add(edge);
@@ -27,11 +28,11 @@ public class Graph<T> {
     return vertexes;
   }
 
-  public List<Edge> getNeighbors(Vertex vertex){
+  public List<Edge<T>> getNeighbors(Vertex<T> vertex){
     if(!vertexes.contains(vertex))throw new NoSuchElementException();
     if(vertexes.size()==1){
-      List<Edge> holder = new ArrayList<>();
-      holder.add(new Edge(vertex,vertex));
+      List<Edge<T>> holder = new ArrayList<>();
+      holder.add(new Edge<>(vertex,vertex));
       return holder;
     }
 
@@ -44,29 +45,58 @@ public class Graph<T> {
     return vertexes.size();
   }
 
-  public Set breathFirstTraversal(Vertex startingNode){
-    Queue<Vertex> q = new Queue<>();
+  public Iterable<Vertex<T>> breathFirstTraversal(Vertex<T> startingNode){
+    Queue<Vertex<T>> q = new Queue<>();
     q.enqueue(startingNode);
-    Set<Vertex> s = new LinkedHashSet<>();
+    Set<Vertex<T>> s = new LinkedHashSet<>();
     s.add(startingNode);
 
     while(!q.isEmpty()){
-      Vertex current = q.dequeue();
-      for(Object e:current.edges){
-        Edge eHolder = ((Edge) e);
-        if(!s.contains(eHolder.vertexTwo)){
-          q.enqueue(eHolder.vertexTwo);
-          s.add(eHolder.vertexTwo);
+      Vertex<T> current = q.dequeue();
+      for(Edge<T> e:current.edges){
+
+        if(!s.contains(e.vertexTwo)){
+          q.enqueue(e.vertexTwo);
+          s.add(e.vertexTwo);
         }
-        if(!s.contains(eHolder.vertexOne)){
-          q.enqueue(eHolder.vertexOne);
-          s.add(eHolder.vertexOne);
+        if(!s.contains(e.vertexOne)){
+          q.enqueue(e.vertexOne);
+          s.add(e.vertexOne);
         }
 
       }
 
     }
     return s;
+  }
+
+  public Iterable<T> depthFirstTraversal(Graph<T> graph){
+    Stack<Vertex<T>> stack = new Stack<>();
+    Vertex<T> root = graph.getNodes().get(0);
+    stack.push(root);
+    HashSet<Vertex<T>> s = new HashSet<>();
+    List<T> r = new ArrayList<>();
+    s.add(root);
+    while(!stack.isEmpty()){
+      Vertex<T> current = stack.pop();
+      r.add(current.value);
+      for(Edge<T> e:current.edges){
+
+        if(!s.contains(e.vertexTwo)){
+          System.out.println(e.vertexTwo.value);
+          stack.push(e.vertexTwo);
+          s.add(e.vertexTwo);
+        }
+        if(!s.contains(e.vertexOne)){
+          System.out.println(e.vertexOne.value);
+          stack.push(e.vertexOne);
+          s.add(e.vertexOne);
+        }
+
+      }
+
+    }
+    return r;
   }
 
 }

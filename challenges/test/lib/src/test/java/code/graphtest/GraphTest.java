@@ -8,31 +8,31 @@ import org.junit.Test;
 import static code.graph.GetEdge.getEdge;
 import static org.junit.Assert.*;
 
-public class GraphTest {
+public class GraphTest{
   @Test
   public void testingGraph(){
-    Graph graph = new Graph();
+    Graph<Object> graph = new Graph<>();
     System.out.println(graph.size());
     assertNull(graph.size());
-    Vertex ver1 = graph.addNode(3);
+    Vertex<Object> ver1 = graph.addNode(3);
     System.out.println(graph.size());
     assertSame(1,graph.size());
-    Vertex ver2 = graph.addNode("Cool");
-    Vertex ver3 = graph.addNode(132.3);
+    Vertex<Object> ver2 = graph.addNode("Cool");
+    Vertex<Object> ver3 = graph.addNode(132.3);
     graph.addEdge(ver1,ver2,4);
     System.out.println(graph.getNeighbors(ver1));
   }
 
   @Test
   public void testingBreathGraph(){
-    Graph graph = new Graph();
+    Graph<String> graph = new Graph<>();
 
-    Vertex one = graph.addNode("Pandora");
-    Vertex two = graph.addNode("Arendelle");
-    Vertex three = graph.addNode("Metroville");
-    Vertex four = graph.addNode("Narnia");
-    Vertex five = graph.addNode("Naboo");
-    Vertex six = graph.addNode("Monstropolis");
+    Vertex<String> one = graph.addNode("Pandora");
+    Vertex<String> two = graph.addNode("Arendelle");
+    Vertex<String> three = graph.addNode("Metroville");
+    Vertex<String> four = graph.addNode("Narnia");
+    Vertex<String> five = graph.addNode("Naboo");
+    Vertex<String> six = graph.addNode("Monstropolis");
 
     graph.addEdge(one,two,3);
     graph.addEdge(two,three,4);
@@ -53,14 +53,14 @@ public class GraphTest {
 
   @Test
   public void testingGetEdge(){
-    Graph graph = new Graph();
+    Graph<String> graph = new Graph<>();
 
-    Vertex pandora = graph.addNode("Pandora");
-    Vertex arendelle = graph.addNode("Arendelle");
-    Vertex metroville = graph.addNode("Metroville");
-    Vertex narnia = graph.addNode("Narnia");
-    Vertex naboo = graph.addNode("Naboo");
-    Vertex monstropolis = graph.addNode("Monstropolis");
+    Vertex<String> pandora = graph.addNode("Pandora");
+    Vertex<String> arendelle = graph.addNode("Arendelle");
+    Vertex<String> metroville = graph.addNode("Metroville");
+    Vertex<String> narnia = graph.addNode("Narnia");
+    Vertex<String> naboo = graph.addNode("Naboo");
+    Vertex<String> monstropolis = graph.addNode("Monstropolis");
 
     graph.addEdge(pandora,arendelle,150);
     graph.addEdge(pandora,metroville,82);
@@ -80,5 +80,32 @@ public class GraphTest {
     System.out.println(getEdge(graph,strArr2));
     System.out.println(getEdge(graph,strArr3));
     System.out.println(getEdge(graph,strArr4));
+  }
+
+  @Test
+  public void testingDepthTraversal(){
+    Graph<String> graph = new Graph<>();
+
+    Vertex<String> a = graph.addNode("a");
+    Vertex<String> b = graph.addNode("b");
+    Vertex<String> c = graph.addNode("c");
+    Vertex<String> d = graph.addNode("d");
+    Vertex<String> e = graph.addNode("e");
+    Vertex<String> f = graph.addNode("f");
+    Vertex<String> h = graph.addNode("h");
+    Vertex<String> g = graph.addNode("g");
+
+    graph.addEdge(a,b,1);
+    graph.addEdge(a,d,2);
+    graph.addEdge(b,c,3);
+    graph.addEdge(c,g,4);
+    graph.addEdge(b,d,4);
+
+    graph.addEdge(d,e,5);
+    graph.addEdge(d,f,6);
+    graph.addEdge(d,h,7);
+    graph.addEdge(f,h,8);
+    assertEquals("[a, d, h, f, e, b, c, g]",graph.depthFirstTraversal(graph).toString());
+    System.out.println(graph.depthFirstTraversal(graph));
   }
 }

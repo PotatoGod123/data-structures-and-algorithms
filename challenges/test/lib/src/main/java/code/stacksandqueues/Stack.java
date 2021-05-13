@@ -1,6 +1,5 @@
 package code.stacksandqueues;
 
-import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 public class Stack<T> {
@@ -26,8 +25,7 @@ public class Stack<T> {
     return this.top.value;//if not empty, return the top value
   }
   public boolean isEmpty(){// just checks  to see if the stack is empty
-    if(top==null)return true;
-    return false;
+    return top == null;
   }
   @Override
   public String toString() {

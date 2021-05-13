@@ -455,13 +455,33 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 
 
 ###  Approach And Efficiency
-Time: O(v) - where v is the number of vertices
+Time: O(v+e) - where v is the number of vertices
 Space:O(v)- where v is the number of vertices
 
 ### Solution
 
 ![Repeated Word](../../assets/breathfirstgraph.PNG)
 
+# ####################################################################
+
+
+###  Depth-first traversal on a graph
+Implement a depth-first traversal on a graph.
+
+### Challenge Description
+
+
+
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+
+###  Approach And Efficiency
+Time: O(v+e) - where v is the number of vertices
+Space:O(v)- where v is the number of vertices
+
+### Solution
+
+[Link to code ](../test/lib/src/main/java/code/graph/Graph.java)  
 # ##################################
 
 
