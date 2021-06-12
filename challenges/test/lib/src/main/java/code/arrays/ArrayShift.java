@@ -1,4 +1,4 @@
-package code;
+package code.arrays;
 
 public class ArrayShift {
       public boolean testMethod(){
@@ -6,7 +6,6 @@ public class ArrayShift {
           return  true;
       }
       public static int[] arrayShift(int[] iniArray,int num){
-        int[] tempArr = {1,2,3,6,4,5};
         //finding the middle spot to insert and move traverse from
         int middleSpot = iniArray.length/2;
         //checks if the length is odd, if it is gotta add 1 for it to be in the middle
@@ -30,7 +29,7 @@ public class ArrayShift {
           }
           System.out.println(arrUpdated[i]);
         }
-        System.out.println("hello this is working " +iniArray.length + "<lengeth  middle>"+ middleSpot );
+        System.out.println("hello this is working " +iniArray.length + "<length  middle>"+ middleSpot );
         return arrUpdated;
       }
 }

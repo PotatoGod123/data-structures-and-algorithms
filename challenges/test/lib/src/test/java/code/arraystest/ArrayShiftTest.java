@@ -1,5 +1,6 @@
-package code;
+package code.arraystest;
 
+import code.arrays.ArrayShift;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
