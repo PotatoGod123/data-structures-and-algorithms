@@ -99,4 +99,10 @@ public class Tree<T> {
     return value;
   }
 
+  @Override
+  public String toString() {
+    return "Tree{" +
+      "root=" + root +
+      '}';
+  }
 }
