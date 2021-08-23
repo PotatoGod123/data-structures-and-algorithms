@@ -15,4 +15,14 @@ public class WordFilterTest {
     assertEquals(0,wordFilter.f("w","d"));
 
   }
+
+
+  @Test
+  public void testTest(){
+    String s = "Java";
+    s.concat(" SE 6");
+    System.out.println(s.concat("6 SE 6").replace('6','7'));
+    s.replace('6','7');
+    System.out.println(s);
+  }
 }
