@@ -14,10 +14,10 @@ public class LongestCommonPrefix {
       answer = str.substring(0,i+1);
       for(int j = 1; j < strs.length; j++){
         //checking to see if the prefix starts with each word
-        if(strs[j].startsWith(answer))
-          continue;
-        else
+        if (!strs[j].startsWith(answer)) {
           return str.substring(0, i);
+        }
+
       }
     }
     //will return the prefix or empty string
