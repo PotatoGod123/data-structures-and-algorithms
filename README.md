@@ -18,3 +18,4 @@ Under the `data-structures-and-algorithms` repository, at the top level is a fol
 [Java Structures](./challenges/test/README.md)  
 
 
+You can find all the testing files under the test directory.
