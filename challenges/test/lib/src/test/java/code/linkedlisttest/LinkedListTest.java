@@ -32,7 +32,7 @@ public class LinkedListTest {
     newList.insert(2);
     newList.insert(3);
 
-    System.out.println(newList.toString());
+    System.out.println(newList);
   }
 
   @Test public void testIncludes(){

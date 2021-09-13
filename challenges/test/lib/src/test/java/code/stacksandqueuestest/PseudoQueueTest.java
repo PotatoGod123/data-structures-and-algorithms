@@ -13,7 +13,7 @@ public class PseudoQueueTest {
     pseudoQueueHolder.enqueue(15);
     pseudoQueueHolder.enqueue(10);
     pseudoQueueHolder.enqueue(5);
-    System.out.println(pseudoQueueHolder.toString());
+    System.out.println(pseudoQueueHolder);
 
     assertEquals("PseudoQueue{firstStack=Stack{top=Node{value=5, next=Node{value=10, next=Node{value=15, next=Node{value=20, next=null}}}}}, secondStack=Stack{top=null}}",
       pseudoQueueHolder.toString());
@@ -27,8 +27,8 @@ public class PseudoQueueTest {
     pseudoQueueHolder.enqueue(15);
     pseudoQueueHolder.enqueue(10);
     pseudoQueueHolder.enqueue(5);
-    System.out.println(pseudoQueueHolder.toString());
+    System.out.println(pseudoQueueHolder);
     assertEquals(20,pseudoQueueHolder.dequeue());
-    System.out.println(pseudoQueueHolder.toString());
+    System.out.println(pseudoQueueHolder);
   }
 }
