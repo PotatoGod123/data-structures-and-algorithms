@@ -125,7 +125,7 @@ public class TreeTest {
     searchTree.add(2);
     searchTree.add(1);
     searchTree.add(3);
-    System.out.println(searchTree.toString());
+    System.out.println(searchTree);
     searchTree.add(5);
     searchTree.add(6);
     searchTree.add(7);
@@ -224,7 +224,7 @@ public class TreeTest {
     searchTree.add(12143);
     searchTree.add(1234214214);
 
-    System.out.println(searchTree.toString());
+    System.out.println(searchTree);
     System.out.println(searchTree.breadthFirstBinaryTree());
 
     ArrayList<Integer> holder =  new ArrayList<>();
