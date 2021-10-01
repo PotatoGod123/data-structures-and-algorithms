@@ -13,5 +13,7 @@ public class PalindromeIntegerTest {
     assertTrue(palindromeInteger.isPalindrome(121));
     assertFalse(palindromeInteger.isPalindrome(-121));
     assertFalse(palindromeInteger.isPalindrome(3121));
+
+
   }
 }
